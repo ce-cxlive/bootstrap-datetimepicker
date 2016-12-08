@@ -1229,7 +1229,8 @@
                 widget.find('.timepicker-seconds').hide();
 
                 update();
-                showMode();
+                //reset the view everytime the picker is shown
+                showMode(-1);
 
                 $(window).on('resize', place);
                 widget.on('click', '[data-action]', doAction); // this handles clicks on the widget
